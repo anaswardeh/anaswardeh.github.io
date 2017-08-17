@@ -11,8 +11,8 @@ Experiment with deleting lines of code from the CSS to see how it affects the we
 body {
   padding: 0px;
   margin: 0px;
-  font-family: Georgia, "Times New Roman", "Times", "serif";
-  font-size: 18px;
+  font-family: "Georgia", "Times New Roman", "Times", "serif";
+  font-size: 20px;
   line-height: 150%;
   color: #333;
   background: #efeee7;
@@ -33,7 +33,7 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 28px;  
 }
 
 a {
@@ -49,6 +49,8 @@ a {
 #contact-info,
 #bio-image {
   float: left;
+
+
 }
 
 #main-bio {
