@@ -1,0 +1,122 @@
+html, body{
+	width: 100%;
+	height: 100%;
+}
+
+#img{
+	width: 10em;
+	height: 10em;
+	padding-left: 0;
+	left: 0;
+	float: left;
+	margin-right: 2vw;
+	margin-bottom: 2vw;
+}
+
+#starter-row{
+
+	margin-top: 1vw;
+	width: 100%;
+}
+
+
+.panel {
+    background-color: white;
+    width: 20%;
+    margin-top: 5%;
+    margin-left: 2%;
+	margin-top: 1vw;
+    font-size: 17px;
+    text-align: center;
+    color:  #f05f40;
+    font-weight: bold;
+}
+
+#col{
+	width: 10%;
+}
+
+.PanelLine {
+    border-bottom: .1em solid #f2f2f2;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+
+#github {
+    width: 3em;
+    height: 3em;
+    float: left;
+    margin-left: 5%;
+}
+
+#linkedin {
+    width: 3em;
+    height: 3em;
+    float: left;
+    margin-left: 5%;
+}
+
+#stackOverflow {
+    width: 3em;
+    height: 3em;
+    float: left;
+    margin-left: 5%;
+    margin-bottom: 15%;
+}
+
+
+.red{
+    color:red;
+    }
+.form-area
+{
+    background-color: #FAFAFA;
+	padding: 10px 40px 60px;
+	margin: 10px 0px 60px;
+	border: 1px solid GREY;
+	}
+
+
+#contact{
+	background:#333333;
+	color:#f4f4f4;
+	padding-bottom:80px;
+}
+
+textarea.form-control{
+    height:100px;
+}
+
+#row-contact{
+	width: 100%;
+	margin-left: 15%;
+}
+
+footer {
+    border-top: .5em solid #4aaaa5;
+    position: relative;
+    float: left;
+    width: 100%;
+    background: white;
+    bottom: 0;
+    height: 5em;
+}
+
+.footer-portfolio{
+	    border-top: .5em solid #4aaaa5;
+    position: fixed;
+    float: left;
+    width: 100%;
+    background: white;
+    bottom: 0;
+}
+
+.footerText {
+    padding: 2em;
+    color: black;
+    font-size: 15px;
+	text-align: center;
+}
