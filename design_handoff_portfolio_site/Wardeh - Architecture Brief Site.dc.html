@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Mohammed Wardeh — Data Architect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #f3f1ec; -webkit-font-smoothing: antialiased; }
+  </style>
+</helmet>
+
+<div style="font-family: 'IBM Plex Sans', sans-serif; color: #26282a; background: #f3f1ec; background-image: linear-gradient(rgba(29,51,72,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(29,51,72,0.05) 1px, transparent 1px); background-size: 32px 32px; min-height: 100vh">
+
+  <!-- HEADER -->
+  <header data-screen-label="Header" style="position: sticky; top: 0; z-index: 50; background: rgba(243,241,236,0.94); backdrop-filter: blur(6px); border-bottom: 1.5px solid #1d3348; display: flex; align-items: center; justify-content: space-between; padding: 16px 56px">
+    <a href="#top" style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; color: #1d3348; text-decoration: none">WARDEH.M / DATA ARCHITECT</a>
+    <nav style="display: flex; align-items: center; gap: 26px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em">
+      <a href="#work" style="color: #26282a; text-decoration: none" style-hover="color: {{ accent }}">01 WORK</a>
+      <a href="#systems" style="color: #26282a; text-decoration: none" style-hover="color: {{ accent }}">02 SYSTEMS</a>
+      <a href="#leadership" style="color: #26282a; text-decoration: none" style-hover="color: {{ accent }}">03 LEADERSHIP</a>
+      <a href="#teaching" style="color: #26282a; text-decoration: none" style-hover="color: {{ accent }}">04 TEACHING</a>
+      <a href="#principles" style="color: #26282a; text-decoration: none" style-hover="color: {{ accent }}">05 PRINCIPLES</a>
+      <a href="#contact" style="background: #1d3348; color: #f3f1ec; padding: 8px 18px; text-decoration: none">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" data-screen-label="Hero" style="max-width: 1160px; margin: 0 auto; padding: 120px 56px 150px; box-sizing: border-box">
+    <p style="margin: 0 0 22px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: {{ accent }}">DATA ARCHITECTURE / ENGINEERING LEADERSHIP / PUBLIC SERVICE</p>
+    <h1 style="margin: 0; font-size: 64px; font-weight: 700; line-height: 1.08; letter-spacing: -0.015em; color: #1d3348; max-width: 880px; text-wrap: balance">I turn difficult missions into systems people can trust.</h1>
+    <p style="margin: 32px 0 0; font-family: 'Source Serif 4', serif; font-size: 20px; line-height: 1.75; color: #444a50; max-width: 680px; text-wrap: pretty">Data architect, engineering leader, and educator with more than twenty years of experience. I build governed data platforms, historical warehouses, analytical products — and the teams needed to sustain them.</p>
+    <div style="display: flex; gap: 14px; margin-top: 40px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 500">
+      <a href="#work" style="background: #1d3348; color: #f3f1ec; padding: 14px 26px; text-decoration: none">VIEW SELECTED SYSTEMS →</a>
+      <a href="#principles" style="border: 1.5px solid #1d3348; color: #1d3348; padding: 12.5px 26px; text-decoration: none">READ MY OPERATING PRINCIPLES</a>
+    </div>
+
+    <!-- PROOF STRIP -->
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 96px; border: 1.5px solid #1d3348; background: #fbfaf7; font-family: 'IBM Plex Mono', monospace">
+      <div style="padding: 20px 24px; border-right: 1px solid rgba(29,51,72,0.25)">
+        <p style="margin: 0; font-size: 20px; font-weight: 600; color: #1d3348">20+ YEARS</p>
+        <p style="margin: 6px 0 0; font-size: 12px; color: #5c6670; letter-spacing: 0.04em">DATA AND SOFTWARE</p>
+      </div>
+      <div style="padding: 20px 24px; border-right: 1px solid rgba(29,51,72,0.25)">
+        <p style="margin: 0; font-size: 20px; font-weight: 600; color: #1d3348">3 CONTINENTS</p>
+        <p style="margin: 6px 0 0; font-size: 12px; color: #5c6670; letter-spacing: 0.04em">GLOBAL AND PUBLIC-SECTOR WORK</p>
+      </div>
+      <div style="padding: 20px 24px; border-right: 1px solid rgba(29,51,72,0.25)">
+        <p style="margin: 0; font-size: 20px; font-weight: 600; color: #1d3348">ARCHITECT + BUILDER</p>
+        <p style="margin: 6px 0 0; font-size: 12px; color: #5c6670; letter-spacing: 0.04em">STRATEGY THROUGH DELIVERY</p>
+      </div>
+      <div style="padding: 20px 24px">
+        <p style="margin: 0; font-size: 20px; font-weight: 600; color: #1d3348">EDUCATOR</p>
+        <p style="margin: 6px 0 0; font-size: 12px; color: #5c6670; letter-spacing: 0.04em">UNIVERSITY AND PROFESSIONAL TEACHING</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 WORK — SELECTED SYSTEMS -->
+  <section id="work" data-screen-label="Work" style="background: #fbfaf7; border-top: 1.5px solid #1d3348; padding: 120px 56px">
+    <div style="max-width: 1160px; margin: 0 auto">
+      <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 52px">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; color: {{ accent }}">01</span>
+        <h2 style="margin: 0; font-size: 34px; font-weight: 700; color: #1d3348; letter-spacing: -0.01em">Selected Systems</h2>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6670; letter-spacing: 0.06em">SANITIZED TECHNICAL BRIEFS</span>
+      </div>
+
+      <div style="display: grid; gap: 40px">
+
+        <!-- SYSTEM 01 -->
+        <article style="border: 1.5px solid #1d3348; background: #f3f1ec">
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 28px; border-bottom: 1.5px solid #1d3348; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em">
+            <span style="font-weight: 600; color: {{ accent }}">SYSTEM 01</span>
+            <span style="color: #5c6670">DEFENSE / 2024→</span>
+          </div>
+          <div style="padding: 36px 32px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px 48px">
+            <h3 style="margin: 0; grid-column: 1 / -1; font-size: 30px; font-weight: 700; color: #1d3348; letter-spacing: -0.01em">Enterprise Readiness &amp; Accountability Platform</h3>
+            <div>
+              <p style="margin: 0 0 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #5c6670">MISSION</p>
+              <p style="margin: 0; font-family: 'Source Serif 4', serif; font-size: 19px; line-height: 1.7; color: #444a50; text-wrap: pretty">A trusted operational view — personnel, training, finance — from fragmented systems and spreadsheets.</p>
+            </div>
+            <div>
+              <p style="margin: 0 0 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #5c6670">ARCHITECTURE DECISION</p>
+              <p style="margin: 0; font-family: 'Source Serif 4', serif; font-size: 19px; line-height: 1.7; color: #444a50; text-wrap: pretty">Governed metric definitions and semantic models first, built on the platform already owned.</p>
+            </div>
+            <div>
+              <p style="margin: 0 0 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #5c6670">RESULT</p>
+              <p style="margin: 0; font-family: 'Source Serif 4', serif; font-size: 19px; line-height: 1.7; color: #444a50; text-wrap: pretty">Five production analytics products; hours of manual consolidation replaced by refreshes in minutes.</p>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 32px; border-top: 1px solid rgba(29,51,72,0.25); font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em"><span style="color: #5c6670">MY ROLE — ARCHITECTURE · DATA ENGINEERING · GOVERNANCE · STAKEHOLDER ALIGNMENT</span><a href="#" style="color: {{ accent }}; font-weight: 600; text-decoration: none">READ TECHNICAL BRIEF →</a></div>
+        </article>
+
+        <!-- SYSTEM 02 -->
+        <article style="border: 1.5px solid #1d3348; background: #f3f1ec">
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 28px; border-bottom: 1.5px solid #1d3348; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em">
+            <span style="font-weight: 600; color: {{ accent }}">SYSTEM 02</span>
+            <span style="color: #5c6670">ENTERPRISE CONSULTING / 2021–2024</span>
+          </div>
+          <div style="padding: 36px 32px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 32px 56px; align-items: start">
+            <div style="display: grid; gap: 32px">
+              <h3 style="margin: 0; font-size: 30px; font-weight: 700; color: #1d3348; letter-spacing: -0.01em">Production Analytics Pipeline Platform</h3>
+              <div>
+                <p style="margin: 0 0 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #5c6670">MISSION</p>
+                <p style="margin: 0; font-family: 'Source Serif 4', serif; font-size: 19px; line-height: 1.7; color: #444a50; text-wrap: pretty">End-to-end pipeline architecture for enterprise analytics, with engineering standards a team could sustain.</p>
+              </div>
+              <div>
+                <p style="margin: 0 0 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #5c6670">ARCHITECTURE DECISION</p>
+                <p style="margin: 0; font-family: 'Source Serif 4', serif; font-size: 19px; line-height: 1.7; color: #444a50; text-wrap: pretty">Treat the workflow itself as the product — query tuning, Spark optimization, and orchestration redesign.</p>
+              </div>
+              <div>
+                <p style="margin: 0 0 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #5c6670">RESULT</p>
+                <p style="margin: 0; font-family: 'Source Serif 4', serif; font-size: 19px; line-height: 1.7; color: #444a50; text-wrap: pretty">A predictable production pipeline the business could schedule around.</p>
+              </div>
+            </div>
+            <div style="background: #14171a; border-radius: 6px; padding: 24px 26px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 2; margin-top: 8px">
+              <p style="margin: 0; color: #9aa3ab; font-size: 12px">-- nightly ETL, before and after redesign</p>
+              <p style="margin: 8px 0 0; color: #e8e6df">runtime_before &nbsp;=&nbsp; <span style="color: #d97757">1h 50m</span></p>
+              <p style="margin: 0; color: #e8e6df">runtime_after &nbsp;&nbsp;=&nbsp; <span style="color: #7fb069">8m 30s</span></p>
+              <p style="margin: 8px 0 0; color: #7d8790">-- 92% reduction, same hardware</p>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 32px; border-top: 1px solid rgba(29,51,72,0.25); font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em"><span style="color: #5c6670">MY ROLE — TECH LEAD · PIPELINE ARCHITECTURE · MENTORING · PRODUCTION OWNERSHIP</span><a href="#" style="color: {{ accent }}; font-weight: 600; text-decoration: none">READ TECHNICAL BRIEF →</a></div>
+        </article>
+
+        <!-- SYSTEM 03 -->
+        <article style="border: 1.5px solid #1d3348; background: #f3f1ec">
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 28px; border-bottom: 1.5px solid #1d3348; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em">
+            <span style="font-weight: 600; color: {{ accent }}">SYSTEM 03</span>
+            <span style="color: #5c6670">INTERNATIONAL ORGANIZATION / 2005–2019</span>
+          </div>
+          <div style="padding: 36px 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px 56px">
+            <h3 style="margin: 0; grid-column: 1 / -1; font-size: 30px; font-weight: 700; color: #1d3348; letter-spacing: -0.01em">Global Reporting &amp; Multilingual Publishing Infrastructure</h3>
+            <div>
+              <p style="margin: 0 0 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #5c6670">MISSION</p>
+              <p style="margin: 0; font-family: 'Source Serif 4', serif; font-size: 19px; line-height: 1.7; color: #444a50; text-wrap: pretty">Fourteen years at the United Nations — ETL into enterprise reporting warehouses for multilingual stakeholders across New York and Geneva.</p>
+            </div>
+            <div>
+              <p style="margin: 0 0 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #5c6670">RESULT</p>
+              <p style="margin: 0; font-family: 'Source Serif 4', serif; font-size: 19px; line-height: 1.7; color: #444a50; text-wrap: pretty">Legacy publication processes modernized into accessible, automated workflows serving global public audiences.</p>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 32px; border-top: 1px solid rgba(29,51,72,0.25); font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em"><span style="color: #5c6670">MY ROLE — DATA WAREHOUSING · BI · DIGITAL PUBLISHING · CONTENT OPERATIONS</span><a href="#" style="color: {{ accent }}; font-weight: 600; text-decoration: none">READ TECHNICAL BRIEF →</a></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 SYSTEMS — OPERATING MODEL -->
+  <section id="systems" data-screen-label="Systems" style="border-top: 1.5px solid #1d3348; padding: 120px 56px">
+    <div style="max-width: 1160px; margin: 0 auto">
+      <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 16px">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; color: {{ accent }}">02</span>
+        <h2 style="margin: 0; font-size: 34px; font-weight: 700; color: #1d3348; letter-spacing: -0.01em">How I structure a platform</h2>
+      </div>
+      <p style="margin: 0 0 48px; font-family: 'Source Serif 4', serif; font-size: 18px; line-height: 1.7; color: #444a50; max-width: 640px; text-wrap: pretty">Every engagement starts as L1 — reality — and earns its way up. The platform is the deliverable. The principles are what allow it to endure.</p>
+
+      <div style="display: grid; grid-template-columns: 1fr 200px; gap: 40px; align-items: stretch">
+        <div style="display: flex; flex-direction: column">
+          <div style="border: 1.5px solid #1d3348; background: #fbfaf7; padding: 18px 24px; display: grid; grid-template-columns: 110px 220px 1fr; gap: 20px; align-items: baseline">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; color: {{ accent }}">L5</span>
+            <span style="font-size: 16px; font-weight: 600; color: #1d3348">DECISIONS</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6670">Executive reporting / operational answers / trusted measures</span>
+          </div>
+          <div style="width: 1.5px; height: 16px; background: #1d3348; margin-left: 48px"></div>
+          <div style="border: 1.5px solid #1d3348; background: #fbfaf7; padding: 18px 24px; display: grid; grid-template-columns: 110px 220px 1fr; gap: 20px; align-items: baseline">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; color: {{ accent }}">L4</span>
+            <span style="font-size: 16px; font-weight: 600; color: #1d3348">MEANING</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6670">Semantic models / KPI definitions / business ownership</span>
+          </div>
+          <div style="width: 1.5px; height: 16px; background: #1d3348; margin-left: 48px"></div>
+          <div style="border: 1.5px solid #1d3348; background: #fbfaf7; padding: 18px 24px; display: grid; grid-template-columns: 110px 220px 1fr; gap: 20px; align-items: baseline">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; color: {{ accent }}">L3</span>
+            <span style="font-size: 16px; font-weight: 600; color: #1d3348">HISTORY</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6670">Dimensional warehouse / lakehouse / auditability</span>
+          </div>
+          <div style="width: 1.5px; height: 16px; background: #1d3348; margin-left: 48px"></div>
+          <div style="border: 1.5px solid #1d3348; background: #fbfaf7; padding: 18px 24px; display: grid; grid-template-columns: 110px 220px 1fr; gap: 20px; align-items: baseline">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; color: {{ accent }}">L2</span>
+            <span style="font-size: 16px; font-weight: 600; color: #1d3348">ENGINEERING</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6670">Pipelines / quality controls / orchestration / observability</span>
+          </div>
+          <div style="width: 1.5px; height: 16px; background: #1d3348; margin-left: 48px"></div>
+          <div style="border: 1.5px dashed #7a8a96; padding: 18px 24px; display: grid; grid-template-columns: 110px 220px 1fr; gap: 20px; align-items: baseline">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; color: #5c6670">L1</span>
+            <span style="font-size: 16px; font-weight: 600; color: #5c6670">REALITY</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6670">Fragmented systems / spreadsheets / documents / changing requirements</span>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: space-between; border-left: 1.5px solid #1d3348; padding-left: 28px; font-family: 'IBM Plex Mono', monospace">
+          <div>
+            <p style="margin: 0; font-size: 13px; font-weight: 600; color: #1d3348; letter-spacing: 0.08em">OWNERSHIP</p>
+            <p style="margin: 6px 0 0; font-size: 12px; line-height: 1.6; color: #5c6670">Every measure has a named business owner.</p>
+          </div>
+          <div>
+            <p style="margin: 0; font-size: 13px; font-weight: 600; color: #1d3348; letter-spacing: 0.08em">TRACEABILITY</p>
+            <p style="margin: 6px 0 0; font-size: 12px; line-height: 1.6; color: #5c6670">Every number can be walked back to its source.</p>
+          </div>
+          <div>
+            <p style="margin: 0; font-size: 13px; font-weight: 600; color: #1d3348; letter-spacing: 0.08em">SUSTAINABILITY</p>
+            <p style="margin: 6px 0 0; font-size: 12px; line-height: 1.6; color: #5c6670">The system outlives its architect.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 LEADERSHIP -->
+  <section id="leadership" data-screen-label="Leadership" style="background: #1d3348; color: #e9e6dd; padding: 110px 56px">
+    <div style="max-width: 1160px; margin: 0 auto">
+      <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; color: {{ accentLight }}">03</span>
+        <h2 style="margin: 0; font-size: 34px; font-weight: 700; letter-spacing: -0.01em; color: #f5f3ec">Leadership</h2>
+      </div>
+      <p style="margin: 0 0 56px; font-family: 'Source Serif 4', serif; font-size: 19px; line-height: 1.75; color: #c4cbd2; max-width: 640px; text-wrap: pretty">The pipelines matter less than the decisions around them — and how the team executes without the architect becoming the bottleneck.</p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px">
+        <div style="border-top: 2px solid {{ accentLight }}; padding-top: 22px">
+          <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #f5f3ec">DIRECTION</p>
+          <p style="margin: 0; font-family: 'Source Serif 4', serif; font-size: 17px; line-height: 1.7; color: #c4cbd2; text-wrap: pretty">Architecture, strategy, roadmap, priorities — deciding what should be built and in what order.</p>
+        </div>
+        <div style="border-top: 2px solid {{ accentLight }}; padding-top: 22px">
+          <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #f5f3ec">EXECUTION</p>
+          <p style="margin: 0; font-family: 'Source Serif 4', serif; font-size: 17px; line-height: 1.7; color: #c4cbd2; text-wrap: pretty">Engineering standards, delivery, quality controls, root-cause analysis — routine, not rescue.</p>
+        </div>
+        <div style="border-top: 2px solid {{ accentLight }}; padding-top: 22px">
+          <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #f5f3ec">CAPABILITY</p>
+          <p style="margin: 0; font-family: 'Source Serif 4', serif; font-size: 17px; line-height: 1.7; color: #c4cbd2; text-wrap: pretty">Mentoring, ownership, operating models — building teams that don't route every decision through one person.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 TEACHING -->
+  <section id="teaching" data-screen-label="Teaching" style="border-top: 1.5px solid #1d3348; padding: 100px 56px">
+    <div style="max-width: 1160px; margin: 0 auto">
+      <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 16px">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; color: {{ accent }}">04</span>
+        <h2 style="margin: 0; font-size: 34px; font-weight: 700; color: #1d3348; letter-spacing: -0.01em">Teaching</h2>
+      </div>
+      <p style="margin: 0 0 48px; font-family: 'Source Serif 4', serif; font-size: 24px; line-height: 1.6; color: #444a50; max-width: 680px; text-wrap: pretty">Teaching is how I test whether a system is understandable. If I can't explain it to a graduate class of working professionals, it isn't finished.</p>
+      <div style="display: grid; gap: 14px; font-family: 'IBM Plex Mono', monospace; border-top: 1px solid rgba(29,51,72,0.3); padding-top: 28px">
+        <p style="margin: 0; font-size: 13.5px; font-weight: 600; color: #1d3348; letter-spacing: 0.04em">UMGC&ensp;·&ensp;GEORGE WASHINGTON UNIVERSITY&ensp;·&ensp;BARUCH COLLEGE (CUNY)</p>
+        <p style="margin: 0; font-size: 12px; color: #5c6670; letter-spacing: 0.04em">DATA SCIENCE · DATABASES · SQL · SOFTWARE ENGINEERING · STATISTICAL MODELING</p>
+        <p style="margin: 14px 0 0; font-size: 12px; color: #5c6670; letter-spacing: 0.04em">M.S. CANDIDATE, APPLIED &amp; COMPUTATIONAL MATHEMATICS — JOHNS HOPKINS UNIVERSITY&ensp;·&ensp;M.S. CIS, BOSTON UNIVERSITY&ensp;·&ensp;B.A. ENGLISH LITERATURE</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 PRINCIPLES -->
+  <section id="principles" data-screen-label="Principles" style="background: #fbfaf7; border-top: 1.5px solid #1d3348; padding: 120px 56px">
+    <div style="max-width: 1160px; margin: 0 auto">
+      <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 52px">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; color: {{ accent }}">05</span>
+        <h2 style="margin: 0; font-size: 34px; font-weight: 700; color: #1d3348; letter-spacing: -0.01em">Operating Principles</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border-top: 1px solid rgba(29,51,72,0.3)">
+        <div style="padding: 32px 40px 32px 0; border-bottom: 1px solid rgba(29,51,72,0.3)">
+          <p style="margin: 0 0 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: {{ accent }}; letter-spacing: 0.1em">P-01</p>
+          <h3 style="margin: 0 0 10px; font-size: 20px; font-weight: 600; color: #1d3348">Architecture before tools</h3>
+          <p style="margin: 0; font-family: 'Source Serif 4', serif; font-size: 18px; line-height: 1.7; color: #444a50; text-wrap: pretty">The problem determines the system. The product catalog does not.</p>
+        </div>
+        <div style="padding: 32px 0 32px 40px; border-bottom: 1px solid rgba(29,51,72,0.3); border-left: 1px solid rgba(29,51,72,0.3)">
+          <p style="margin: 0 0 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: {{ accent }}; letter-spacing: 0.1em">P-02</p>
+          <h3 style="margin: 0 0 10px; font-size: 20px; font-weight: 600; color: #1d3348">Define the measure before the dashboard</h3>
+          <p style="margin: 0; font-family: 'Source Serif 4', serif; font-size: 18px; line-height: 1.7; color: #444a50; text-wrap: pretty">A visual cannot correct an undefined or unowned metric.</p>
+        </div>
+        <div style="padding: 32px 40px 32px 0; border-bottom: 1px solid rgba(29,51,72,0.3)">
+          <p style="margin: 0 0 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: {{ accent }}; letter-spacing: 0.1em">P-03</p>
+          <h3 style="margin: 0 0 10px; font-size: 20px; font-weight: 600; color: #1d3348">Historical truth must be designed</h3>
+          <p style="margin: 0; font-family: 'Source Serif 4', serif; font-size: 18px; line-height: 1.7; color: #444a50; text-wrap: pretty">Current-state reporting is easy. Reconstructing what changed, when, and why requires architecture.</p>
+        </div>
+        <div style="padding: 32px 0 32px 40px; border-bottom: 1px solid rgba(29,51,72,0.3); border-left: 1px solid rgba(29,51,72,0.3)">
+          <p style="margin: 0 0 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: {{ accent }}; letter-spacing: 0.1em">P-04</p>
+          <h3 style="margin: 0 0 10px; font-size: 20px; font-weight: 600; color: #1d3348">Build teams that outlive the architect</h3>
+          <p style="margin: 0; font-family: 'Source Serif 4', serif; font-size: 18px; line-height: 1.7; color: #444a50; text-wrap: pretty">A system is not sustainable when every decision flows through one person.</p>
+        </div>
+        <div style="padding: 32px 40px 32px 0; border-bottom: 1px solid rgba(29,51,72,0.3)">
+          <p style="margin: 0 0 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: {{ accent }}; letter-spacing: 0.1em">P-05</p>
+          <h3 style="margin: 0 0 10px; font-size: 20px; font-weight: 600; color: #1d3348">Make complexity understandable</h3>
+          <p style="margin: 0; font-family: 'Source Serif 4', serif; font-size: 18px; line-height: 1.7; color: #444a50; text-wrap: pretty">Good architecture reduces cognitive load — for engineers, leaders, and users.</p>
+        </div>
+        <div style="padding: 32px 0 32px 40px; border-bottom: 1px solid rgba(29,51,72,0.3); border-left: 1px solid rgba(29,51,72,0.3); display: flex; align-items: center">
+          <p style="margin: 0; font-family: 'Source Serif 4', serif; font-style: italic; font-size: 17px; line-height: 1.7; color: #5c6670; text-wrap: pretty">Before I was a data architect I studied English literature. Both disciplines are the same job: find the structure that makes a difficult text legible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" data-screen-label="Contact" style="border-top: 1.5px solid #1d3348; padding: 88px 56px; text-align: center">
+    <p style="margin: 0 0 16px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: {{ accent }}">CONTACT</p>
+    <h2 style="margin: 0; font-size: 40px; font-weight: 700; color: #1d3348; letter-spacing: -0.01em">Have a difficult mission?</h2>
+    <p style="margin: 18px auto 0; font-family: 'Source Serif 4', serif; font-size: 19px; line-height: 1.7; color: #444a50; max-width: 520px; text-wrap: pretty">Bring me the mission, the constraints, and the systems that are not working together.</p>
+    <p style="margin: 22px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #5c6670">WASHINGTON, D.C. · DATA ARCHITECTURE AND ENGINEERING LEADERSHIP</p>
+    <div style="display: flex; gap: 14px; justify-content: center; margin-top: 36px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; font-weight: 500">
+      <a href="mailto:anaswardeh@gmail.com" style="background: #1d3348; color: #f3f1ec; padding: 14px 26px; text-decoration: none">ANASWARDEH@GMAIL.COM</a>
+      <a href="#" style="border: 1.5px solid #1d3348; color: #1d3348; padding: 12.5px 26px; text-decoration: none">LINKEDIN</a>
+      <a href="#" style="border: 1.5px solid #1d3348; color: #1d3348; padding: 12.5px 26px; text-decoration: none">GITHUB</a>
+    </div>
+  </section>
+
+  <footer style="border-top: 1.5px solid #1d3348; display: flex; justify-content: space-between; padding: 20px 56px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6670; letter-spacing: 0.06em">
+    <span>© 2026 MOHAMMED WARDEH</span>
+    <span>DRAWN, THEN BUILT.</span>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#A84A29&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#A84A29&quot;, &quot;#C05621&quot;, &quot;#8A6D3B&quot;, &quot;#3E6B54&quot;], &quot;section&quot;: &quot;Theme&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#A84A29';
+    return {
+      accent,
+      accentLight: accent === '#A84A29' ? '#E08A5F' : accent,
+    };
+  }
+}
+</script>
+</body>
+</html>

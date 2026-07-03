@@ -1,0 +1,890 @@
+/* ── Design tokens (LOCKED per design_handoff_portfolio_site/README.md) ──
+   Do not add colors, gradients, or pure #FFF/#000 surfaces.
+   Rust #A84A29 on LIGHT grounds only; on navy always #E08A5F.            */
+:root {
+  --ivory: #f3f1ec;
+  --card: #fbfaf7;
+  --navy: #1d3348;
+  --navy-hover: #16283a; /* ~8% darker, hover only */
+  --rust: #a84a29;
+  --rust-light: #e08a5f;
+  --charcoal: #14171a;
+  --ink: #26282a;
+  --body: #444a50;
+  --muted: #5c6670;
+  --code-muted: #7d8790;
+  --rule: rgba(29, 51, 72, 0.25);
+  --rule-30: rgba(29, 51, 72, 0.3);
+  --on-navy-head: #f5f3ec;
+  --on-navy-body: #c4cbd2;
+  --sans: 'IBM Plex Sans', sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+  --serif: 'Source Serif 4', serif;
+  --pad-x: 56px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--ivory);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Drafting grid over the whole sheet */
+.sheet {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(29, 51, 72, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 51, 72, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* ── Header ─────────────────────────── */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(243, 241, 236, 0.94);
+  backdrop-filter: blur(6px);
+  border-bottom: 1.5px solid var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px var(--pad-x);
+}
+
+.wordmark {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.nav-desktop a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav-desktop a:hover {
+  color: var(--rust);
+}
+
+.nav-desktop .nav-contact {
+  background: var(--navy);
+  color: var(--ivory);
+  padding: 8px 18px;
+}
+
+.nav-desktop .nav-contact:hover {
+  background: var(--navy-hover);
+  color: var(--ivory);
+}
+
+.nav-toggle {
+  display: none;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--navy);
+  background: none;
+  border: 1.5px solid var(--navy);
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+/* ── Hero ───────────────────────────── */
+.hero {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 120px var(--pad-x) 150px;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  color: var(--rust);
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 6.5vw, 64px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  color: var(--navy);
+  max-width: 880px;
+  text-wrap: balance;
+}
+
+.lede {
+  margin-top: 32px;
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.75;
+  color: var(--body);
+  max-width: 680px;
+  text-wrap: pretty;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.btn-row.center {
+  justify-content: center;
+}
+
+.btn-solid,
+.btn-outline {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn-solid {
+  background: var(--navy);
+  color: var(--ivory);
+  padding: 14px 26px;
+}
+
+.btn-solid:hover {
+  background: var(--navy-hover);
+}
+
+.btn-outline {
+  border: 1.5px solid var(--navy);
+  color: var(--navy);
+  padding: 12.5px 26px;
+}
+
+.btn-outline:hover {
+  background: rgba(29, 51, 72, 0.08);
+}
+
+/* Proof strip */
+.proof {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 96px;
+  border: 1.5px solid var(--navy);
+  background: var(--card);
+  font-family: var(--mono);
+}
+
+.proof-cell {
+  padding: 20px 24px;
+  border-right: 1px solid var(--rule);
+}
+
+.proof-cell:last-child {
+  border-right: none;
+}
+
+.proof-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.proof-label {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+/* ── Sections (shared) ──────────────── */
+.section {
+  border-top: 1.5px solid var(--navy);
+  padding: 120px var(--pad-x);
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.sec-work .section-heading,
+.sec-principles .section-heading {
+  margin-bottom: 52px;
+}
+
+.sec-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--rust);
+}
+
+.sec-num.on-dark {
+  color: var(--rust-light); /* dark rust fails contrast on navy — never use it there */
+}
+
+.section-heading h2 {
+  font-size: clamp(28px, 4.5vw, 34px);
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+
+.section-heading h2.on-dark {
+  color: var(--on-navy-head);
+}
+
+.sec-caption {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+.sec-intro {
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--body);
+  max-width: 640px;
+  text-wrap: pretty;
+  margin-bottom: 48px;
+}
+
+/* ── 01 Work ────────────────────────── */
+.sec-work {
+  background: var(--card);
+}
+
+.briefs {
+  display: grid;
+  gap: 40px;
+}
+
+.brief {
+  border: 1.5px solid var(--navy);
+  background: var(--ivory);
+}
+
+.brief-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 14px 28px;
+  border-bottom: 1.5px solid var(--navy);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.brief-id {
+  font-weight: 600;
+  color: var(--rust);
+}
+
+.brief-class {
+  color: var(--muted);
+}
+
+.brief-body {
+  padding: 36px 32px;
+  display: grid;
+  gap: 32px 48px;
+}
+
+.brief-body.cols-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.brief-body.cols-2 {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 56px;
+}
+
+.brief-body.split {
+  grid-template-columns: 1.15fr 1fr;
+  gap: 32px 56px;
+  align-items: start;
+}
+
+.split-left {
+  display: grid;
+  gap: 32px;
+}
+
+.brief-body h3 {
+  font-size: clamp(24px, 4vw, 30px);
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+
+.span-all {
+  grid-column: 1 / -1;
+}
+
+.field-label {
+  margin-bottom: 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.field-text {
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--body);
+  text-wrap: pretty;
+}
+
+.brief-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 14px 32px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.brief-role {
+  color: var(--muted);
+}
+
+.brief-link {
+  color: var(--rust);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brief-link:hover {
+  color: var(--navy);
+}
+
+/* Code panel (charcoal ground — only place it's allowed) */
+.code-panel {
+  background: var(--charcoal);
+  border-radius: 6px;
+  padding: 24px 26px;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 2;
+  margin-top: 8px;
+}
+
+.c-comment {
+  color: #9aa3ab;
+  font-size: 12px;
+}
+
+.c-comment.dim {
+  color: var(--code-muted);
+  margin-top: 8px;
+}
+
+.c-line {
+  color: #e8e6df;
+}
+
+.c-line:first-of-type {
+  margin-top: 8px;
+}
+
+.c-before {
+  color: #d97757;
+}
+
+.c-after {
+  color: #7fb069;
+}
+
+/* ── 02 Systems — operating model ───── */
+.model {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.layers {
+  display: flex;
+  flex-direction: column;
+}
+
+.layer {
+  border: 1.5px solid var(--navy);
+  background: var(--card);
+  padding: 18px 24px;
+  display: grid;
+  grid-template-columns: 110px 220px 1fr;
+  gap: 20px;
+  align-items: baseline;
+}
+
+.layer.dashed {
+  border: 1.5px dashed #7a8a96;
+  background: transparent;
+}
+
+.layer-tag {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--rust);
+}
+
+.layer.dashed .layer-tag,
+.layer.dashed .layer-name {
+  color: var(--muted);
+}
+
+.layer-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.layer-desc {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.tick {
+  width: 1.5px;
+  height: 16px;
+  background: var(--navy);
+  margin-left: 48px;
+}
+
+.rail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  border-left: 1.5px solid var(--navy);
+  padding-left: 28px;
+  font-family: var(--mono);
+}
+
+.rail-head {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.08em;
+}
+
+.rail-body {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* ── 03 Leadership (navy ground) ────── */
+.sec-leadership {
+  background: var(--navy);
+  border-top: none;
+  padding: 110px var(--pad-x);
+}
+
+.sec-leadership .section-heading {
+  margin-bottom: 20px;
+}
+
+.sec-intro.on-dark {
+  font-size: 19px;
+  line-height: 1.75;
+  color: var(--on-navy-body);
+  margin-bottom: 56px;
+}
+
+.lead-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.lead-col {
+  border-top: 2px solid var(--rust-light);
+  padding-top: 22px;
+}
+
+.lead-head {
+  margin-bottom: 12px;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--on-navy-head);
+}
+
+.lead-body {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--on-navy-body);
+  text-wrap: pretty;
+}
+
+/* ── 04 Teaching ────────────────────── */
+.sec-teaching {
+  padding: 100px var(--pad-x);
+}
+
+.teaching-statement {
+  font-family: var(--serif);
+  font-size: 24px;
+  line-height: 1.6;
+  color: var(--body);
+  max-width: 680px;
+  text-wrap: pretty;
+  margin-bottom: 48px;
+}
+
+.credentials {
+  display: grid;
+  gap: 14px;
+  font-family: var(--mono);
+  border-top: 1px solid var(--rule-30);
+  padding-top: 28px;
+}
+
+.cred-schools {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.04em;
+}
+
+.cred-subjects,
+.cred-degrees {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.cred-degrees {
+  margin-top: 14px;
+}
+
+/* ── 05 Principles ──────────────────── */
+.sec-principles {
+  background: var(--card);
+}
+
+.p-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--rule-30);
+}
+
+.p-cell {
+  padding: 32px 40px 32px 0;
+  border-bottom: 1px solid var(--rule-30);
+}
+
+.p-cell:nth-child(even) {
+  padding: 32px 0 32px 40px;
+  border-left: 1px solid var(--rule-30);
+}
+
+.p-tag {
+  margin-bottom: 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--rust);
+  letter-spacing: 0.1em;
+}
+
+.p-cell h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.p-body {
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--body);
+  text-wrap: pretty;
+}
+
+.p-note {
+  display: flex;
+  align-items: center;
+}
+
+.p-note p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+
+/* ── Contact ────────────────────────── */
+.sec-contact {
+  padding: 88px var(--pad-x);
+  text-align: center;
+}
+
+.sec-contact .eyebrow {
+  margin-bottom: 16px;
+}
+
+.sec-contact h2 {
+  font-size: clamp(30px, 5vw, 40px);
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+
+.contact-body {
+  margin: 18px auto 0;
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--body);
+  max-width: 520px;
+  text-wrap: pretty;
+}
+
+.contact-location {
+  margin-top: 22px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.sec-contact .btn-row {
+  margin-top: 36px;
+}
+
+/* ── Footer ─────────────────────────── */
+.footer {
+  border-top: 1.5px solid var(--navy);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 20px var(--pad-x);
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+/* ── Responsive (not designed — implemented per README requirements;
+      size floors: mono ≥12px, serif ≥18px hold at all breakpoints) ── */
+@media (max-width: 960px) {
+  :root {
+    --pad-x: 32px;
+  }
+
+  .hero {
+    padding-top: 88px;
+    padding-bottom: 100px;
+  }
+
+  .section,
+  .sec-leadership,
+  .sec-teaching {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  /* Case-study grids stack single-column */
+  .brief-body.cols-3,
+  .brief-body.cols-2,
+  .brief-body.split {
+    grid-template-columns: 1fr;
+  }
+
+  /* Proof strip 2×2 */
+  .proof {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .proof-cell:nth-child(even) {
+    border-right: none;
+  }
+
+  .proof-cell:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* Layer diagram full-width, rail below */
+  .model {
+    grid-template-columns: 1fr;
+  }
+
+  .rail {
+    border-left: none;
+    border-top: 1.5px solid var(--navy);
+    padding-left: 0;
+    padding-top: 28px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+
+  .rail-block {
+    flex: 1 1 180px;
+  }
+
+  .lead-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 880px) {
+  /* Nav collapses to a simple mono menu */
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--ivory);
+    border-bottom: 1.5px solid var(--navy);
+    padding: 12px var(--pad-x) 20px;
+    gap: 0;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.06em;
+  }
+
+  .nav-mobile a {
+    color: var(--ink);
+    text-decoration: none;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .nav-mobile a:last-child {
+    border-bottom: none;
+  }
+
+  .nav-mobile a:hover {
+    color: var(--rust);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --pad-x: 20px;
+  }
+
+  /* Proof strip 1×4 */
+  .proof {
+    grid-template-columns: 1fr;
+  }
+
+  .proof-cell {
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .proof-cell:last-child {
+    border-bottom: none;
+  }
+
+  /* Layer rows stack their three columns */
+  .layer {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .tick {
+    margin-left: 24px;
+  }
+
+  /* Principles single column */
+  .p-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .p-cell,
+  .p-cell:nth-child(even) {
+    padding: 28px 0;
+    border-left: none;
+  }
+
+  .brief-body {
+    padding: 28px 20px;
+  }
+
+  .brief-head,
+  .brief-foot {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .btn-row a {
+    width: 100%;
+    text-align: center;
+  }
+}
