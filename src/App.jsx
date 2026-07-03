@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
-// Copy is final and approved per design_handoff_portfolio_site/README.md — do not rewrite.
+// Copy is final and approved per design_handoff_portfolio_site/README.md. Do not rewrite.
+// Em dashes are banned in site copy; en dashes in date ranges (2005–2019) stay.
 
 const NAV = [
   { num: '01', label: 'WORK', href: '#work' },
@@ -26,7 +27,7 @@ const SYSTEMS = [
     fields: [
       {
         label: 'MISSION',
-        text: 'A trusted operational view — personnel, training, finance — from fragmented systems and spreadsheets.',
+        text: 'A trusted operational view (personnel, training, finance) from fragmented systems and spreadsheets.',
       },
       {
         label: 'ARCHITECTURE DECISION',
@@ -37,7 +38,7 @@ const SYSTEMS = [
         text: 'Five production analytics products; hours of manual consolidation replaced by refreshes in minutes.',
       },
     ],
-    role: 'MY ROLE — ARCHITECTURE · DATA ENGINEERING · GOVERNANCE · STAKEHOLDER ALIGNMENT',
+    role: 'MY ROLE: ARCHITECTURE · DATA ENGINEERING · GOVERNANCE · STAKEHOLDER ALIGNMENT',
   },
   {
     id: 'SYSTEM 02',
@@ -51,14 +52,14 @@ const SYSTEMS = [
       },
       {
         label: 'ARCHITECTURE DECISION',
-        text: 'Treat the workflow itself as the product — query tuning, Spark optimization, and orchestration redesign.',
+        text: 'Treat the workflow itself as the product: query tuning, Spark optimization, and orchestration redesign.',
       },
       {
         label: 'RESULT',
         text: 'A predictable nightly pipeline the business could schedule around.',
       },
     ],
-    role: 'MY ROLE — TECH LEAD · PIPELINE ARCHITECTURE · MENTORING · PRODUCTION OWNERSHIP',
+    role: 'MY ROLE: TECH LEAD · PIPELINE ARCHITECTURE · MENTORING · PRODUCTION OWNERSHIP',
   },
   {
     id: 'SYSTEM 03',
@@ -79,7 +80,7 @@ const SYSTEMS = [
         text: 'Moved official Arabic publications from desktop-bound processes into accessible digital formats for Member States, diplomats, and global public audiences, while sustaining SQL- and SSRS-based operational reporting.',
       },
     ],
-    role: 'MY ROLE — DATA WAREHOUSING · BI · DIGITAL PUBLISHING · MULTILINGUAL CONTENT OPERATIONS',
+    role: 'MY ROLE: DATA WAREHOUSING · BI · DIGITAL PUBLISHING · MULTILINGUAL CONTENT OPERATIONS',
   },
 ]
 
@@ -100,15 +101,15 @@ const RAIL = [
 const LEADERSHIP = [
   {
     head: 'DIRECTION',
-    body: 'Architecture, strategy, roadmap, priorities — deciding what should be built and in what order.',
+    body: 'Architecture, strategy, roadmap, priorities: deciding what should be built and in what order.',
   },
   {
     head: 'EXECUTION',
-    body: 'Engineering standards, delivery, quality controls, root-cause analysis — routine, not rescue.',
+    body: 'Engineering standards, delivery, quality controls, root-cause analysis: routine, not rescue.',
   },
   {
     head: 'CAPABILITY',
-    body: "Mentoring, ownership, operating models — building teams that don't route every decision through one person.",
+    body: "Mentoring, ownership, operating models: building teams that don't route every decision through one person.",
   },
 ]
 
@@ -136,7 +137,7 @@ const PRINCIPLES = [
   {
     tag: 'P-05',
     title: 'Make complexity understandable',
-    body: 'Good architecture reduces cognitive load — for engineers, leaders, and users.',
+    body: 'Good architecture reduces cognitive load for engineers, leaders, and users.',
   },
 ]
 
@@ -195,7 +196,7 @@ function Hero() {
       <p className="lede">
         Data architect, engineering leader, and educator with more than twenty years of
         experience. I build governed data platforms, historical warehouses, analytical
-        products — and the teams needed to sustain them.
+        products, and the teams needed to sustain them.
       </p>
       <div className="btn-row">
         <a href="#work" className="btn-solid">
@@ -304,7 +305,7 @@ function Systems() {
       <div className="container">
         <SectionHeading num="02" title="How I structure a platform" />
         <p className="sec-intro">
-          Every engagement starts as L1 — reality — and earns its way up. The platform is
+          Every engagement starts at L1 (reality) and earns its way up. The platform is
           the deliverable. The principles are what allow it to endure.
         </p>
         <div className="model">
@@ -340,7 +341,7 @@ function Leadership() {
       <div className="container">
         <SectionHeading num="03" title="Leadership" onDark />
         <p className="sec-intro on-dark">
-          The pipelines matter less than the decisions around them — and how the team
+          The pipelines matter less than the decisions around them, and how the team
           executes without the architect becoming the bottleneck.
         </p>
         <div className="lead-cols">
@@ -374,7 +375,7 @@ function Teaching() {
             DATA SCIENCE · DATABASES · SQL · SOFTWARE ENGINEERING · STATISTICAL MODELING
           </p>
           <p className="cred-degrees">
-            M.S. CANDIDATE, APPLIED &amp; COMPUTATIONAL MATHEMATICS — JOHNS HOPKINS
+            M.S. CANDIDATE, APPLIED &amp; COMPUTATIONAL MATHEMATICS, JOHNS HOPKINS
             UNIVERSITY&ensp;·&ensp;M.S. CIS, BOSTON UNIVERSITY&ensp;·&ensp;B.A. ENGLISH
             LITERATURE
           </p>
