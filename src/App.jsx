@@ -1,8 +1,6 @@
 import { useState } from 'react'
 
 // Copy is final and approved per design_handoff_portfolio_site/README.md — do not rewrite.
-// Open items from the handoff: LinkedIn/GitHub URLs and the technical-brief pages
-// ("READ TECHNICAL BRIEF →" targets, reserved routes /systems/01..03) are placeholders.
 
 const NAV = [
   { num: '01', label: 'WORK', href: '#work' },
@@ -49,7 +47,7 @@ const SYSTEMS = [
     fields: [
       {
         label: 'MISSION',
-        text: 'End-to-end pipeline architecture for enterprise analytics, with engineering standards a team could sustain.',
+        text: 'An enterprise analytics pipeline was too slow and unpredictable to support dependable reporting.',
       },
       {
         label: 'ARCHITECTURE DECISION',
@@ -57,7 +55,7 @@ const SYSTEMS = [
       },
       {
         label: 'RESULT',
-        text: 'A predictable production pipeline the business could schedule around.',
+        text: 'A predictable nightly pipeline the business could schedule around.',
       },
     ],
     role: 'MY ROLE — TECH LEAD · PIPELINE ARCHITECTURE · MENTORING · PRODUCTION OWNERSHIP',
@@ -66,18 +64,22 @@ const SYSTEMS = [
     id: 'SYSTEM 03',
     classification: 'INTERNATIONAL ORGANIZATION / 2005–2019',
     title: 'Global Reporting & Multilingual Publishing Infrastructure',
-    layout: 'cols-2',
+    layout: 'cols-3',
     fields: [
       {
         label: 'MISSION',
-        text: 'Fourteen years at the United Nations — ETL into enterprise reporting warehouses for multilingual stakeholders across New York and Geneva.',
+        text: 'Support operational reporting and official multilingual publishing across United Nations offices in New York and Geneva.',
+      },
+      {
+        label: 'ARCHITECTURE DECISION',
+        text: 'Maintain ETL from conference-management systems into the enterprise reporting warehouse while helping establish a Digital Publishing Unit for accessible Arabic ePub and HTML delivery.',
       },
       {
         label: 'RESULT',
-        text: 'Legacy publication processes modernized into accessible, automated workflows serving global public audiences.',
+        text: 'Moved official Arabic publications from desktop-bound processes into accessible digital formats for Member States, diplomats, and global public audiences, while sustaining SQL- and SSRS-based operational reporting.',
       },
     ],
-    role: 'MY ROLE — DATA WAREHOUSING · BI · DIGITAL PUBLISHING · CONTENT OPERATIONS',
+    role: 'MY ROLE — DATA WAREHOUSING · BI · DIGITAL PUBLISHING · MULTILINGUAL CONTENT OPERATIONS',
   },
 ]
 
@@ -189,7 +191,7 @@ function Hero() {
   return (
     <section id="top" className="hero">
       <p className="eyebrow">DATA ARCHITECTURE / ENGINEERING LEADERSHIP / PUBLIC SERVICE</p>
-      <h1>I turn difficult missions into systems people can trust.</h1>
+      <h1>I turn fragmented data and difficult missions into systems people can trust.</h1>
       <p className="lede">
         Data architect, engineering leader, and educator with more than twenty years of
         experience. I build governed data platforms, historical warehouses, analytical
@@ -276,10 +278,6 @@ function SystemCard({ system }) {
       )}
       <div className="brief-foot">
         <span className="brief-role">{system.role}</span>
-        {/* Placeholder — technical-brief pages (reserved routes /systems/0N) don't exist yet */}
-        <a href="#" className="brief-link" onClick={(e) => e.preventDefault()}>
-          READ TECHNICAL BRIEF →
-        </a>
       </div>
     </article>
   )
@@ -370,7 +368,7 @@ function Teaching() {
         </p>
         <div className="credentials">
           <p className="cred-schools">
-            UMGC&ensp;·&ensp;GEORGE WASHINGTON UNIVERSITY&ensp;·&ensp;BARUCH COLLEGE (CUNY)
+            UMGC&ensp;·&ensp;RUTGERS UNIVERSITY&ensp;·&ensp;BARUCH COLLEGE (CUNY)
           </p>
           <p className="cred-subjects">
             DATA SCIENCE · DATABASES · SQL · SOFTWARE ENGINEERING · STATISTICAL MODELING
